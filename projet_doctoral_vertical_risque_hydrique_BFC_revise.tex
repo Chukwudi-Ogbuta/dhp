@@ -1,0 +1,275 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=2.35cm}
+\usepackage{setspace}
+\setstretch{1.06}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+\title{Projet doctoral en économie, porté par Karine Brisset, professeur d'économie au CRESE, UMLP \\[0.5em]
+\large Risque hydrique, organisation verticale, coopération et concurrence dans les chaînes d'approvisionnement agricoles en Bourgogne--Franche-Comté}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.3em}
+
+\section{Problématique et question centrale}
+
+Le changement climatique affecte directement les conditions de production agricole, mais ses effets ne s'arrêtent pas à la parcelle. Les épisodes de sécheresse peuvent réduire les volumes disponibles, accroître leur variabilité, modifier les calendriers de production et augmenter le risque de rupture. Ces chocs se transmettent ensuite verticalement le long des chaînes d'approvisionnement : producteurs, collecteurs et coopératives, transformateurs, plateformes logistiques, distributeurs et acheteurs publics ou privés.
+
+Dans le même temps, les producteurs peuvent avoir intérêt à coopérer horizontalement afin de mutualiser certaines fonctions : stockage, logistique, transformation, information ou accès à une infrastructure, tout en demeurant concurrents sur les prix, la qualité, l'innovation et l'accès aux débouchés. Cette articulation entre coopération et concurrence devient particulièrement importante lorsque la ressource en eau est rare : la coordination peut accroître la résilience, mais elle peut également réduire l'intensité concurrentielle, créer des barrières à l'entrée ou faciliter des comportements collusifs.
+
+La thèse sera organisée autour de la question centrale suivante :
+
+\begin{quote}
+\textbf{Comment le risque de sécheresse et les contraintes sur la ressource en eau affectent-ils l'organisation horizontale et verticale, la résilience et la territorialisation des chaînes d'approvisionnement agricoles en Bourgogne--Franche-Comté ? Quelles formes de coopération, de contractualisation et de design de marché permettent de réduire ces vulnérabilités tout en préservant la concurrence entre producteurs et l'accès au marché ?}
+\end{quote}
+
+L'ambition est d'identifier les conditions dans lesquelles coopération horizontale et coordination verticale améliorent simultanément la résilience, l'efficacité et le développement du marché, sans générer un pouvoir de marché excessif.
+
+\section{Contexte régional : une question stratégique pour la Bourgogne--Franche-Comté}
+
+La Bourgogne--Franche-Comté constitue un terrain particulièrement pertinent pour ce projet. Le Recensement agricole 2020 dénombrait 23\,662 exploitations pour 2\,428\,467 hectares de surface agricole utilisée. Entre 2010 et 2020, le nombre d'exploitations a diminué de 21,3\,\%, tandis que la SAU moyenne est passée de 80,6 à 102,6 hectares \citep{DRAAF_RA2020}. La région présente par ailleurs une forte diversité productive (grandes cultures, élevage bovin laitier et allaitant, viticulture, polyculture-élevage, maraîchage) qui implique des vulnérabilités différentes face au risque hydrique.
+
+L'accès à l'eau devient un enjeu de plus en plus visible. En 2020, la surface agricole irriguée dans la région atteignait 26\,136 hectares contre 15\,573 hectares en 2010 \citep{DRAAF_RA2020}. Les publications conjoncturelles récentes de la DRAAF indiquent par ailleurs que les épisodes de sécheresse affectent déjà les productions. En mai 2026, les précipitations moyennes régionales n'étaient que de 23 mm, soit environ un tiers des normales trentenaires, et l'ensemble des cultures implantées en hiver ou au printemps était affecté par la sécheresse des sols \citep{DRAAF_Mai2026}. En juillet 2026, les cultures de printemps subissaient particulièrement la combinaison du déficit hydrique et de la chaleur \citep{DRAAF_Juillet2026}.
+
+Ces tensions productives rencontrent des difficultés déjà identifiées dans l'organisation des filières. Le Comité régional de l'alimentation de juillet 2026 souligne le manque de structuration de certaines filières locales, notamment pour les fruits et légumes, ainsi que des problèmes de logistique, de stockage et de distribution. La restauration collective constitue pourtant un débouché régional significatif : les lycées de Bourgogne--Franche-Comté servent près de 10 millions de repas par an \citep{DRAAF_CRALIM2026}. Parallèlement, 33 Projets alimentaires territoriaux étaient reconnus dans la région en 2025, dont 25 en phase opérationnelle de niveau 2 en fin d'année \citep{DRAAF_PAT2025}.
+
+La politique régionale évolue elle-même vers une approche plus intégrée. La feuille de route sur l'eau 2026--2030 adoptée par la Région vise explicitement à intégrer les enjeux de l'eau dans les politiques agricoles, économiques, territoriales et de gestion des lycées, et fait de la coopération entre acteurs un principe central \citep{Region_Eau2026}. Le Fonds hydraulique agricole 2026 soutient la rénovation, l'extension ou la création d'infrastructures d'irrigation, de stockage, de transport et de distribution d'eau ainsi que la maturation de projets collectifs \citep{DRAAF_Hydraulique2026}. Enfin, l'AMI 2026 sur les filières favorables aux ressources naturelles associe explicitement réduction des usages d'eau et sécurisation des débouchés économiques \citep{DRAAF_AMI2026}.
+
+Ces dispositifs montrent que l'adaptation hydrique n'est pas uniquement une question technique. Elle dépend également de l'organisation des marchés, de la contractualisation, des infrastructures de transformation et de la capacité des producteurs à accéder à des débouchés suffisamment stables.
+
+\section{Positionnement scientifique et revue de littérature}
+
+Le projet se situe au croisement de cinq champs de littérature.
+
+\subsection*{Résilience des chaînes d'approvisionnement}
+
+Les travaux récents montrent que la résilience des chaînes alimentaires dépend de la capacité des acteurs à absorber un choc, substituer des fournisseurs et réorganiser les flux. \citet{HobbsHadachek2024} soulignent que la résilience ne se confond pas avec la relocalisation : diversification, redondance et flexibilité organisationnelle peuvent être essentielles. \citet{MaHadachekSexton2024} montrent également que structure de marché et concurrence conditionnent les effets des chocs extrêmes.
+
+Cette littérature motive une analyse de la propagation verticale :
+\[
+\text{sécheresse}
+\rightarrow
+\text{production}
+\rightarrow
+\text{collecte / transformation}
+\rightarrow
+\text{prix et contrats}
+\rightarrow
+\text{approvisionnement final}.
+\]
+
+\subsection*{\textit{Market thickness} et développement du marché}
+
+Le concept de \textit{market thickness} fournit le socle théorique de la thèse. Des marchés plus épais offrent davantage de partenaires potentiels et améliorent les possibilités d'appariement entre agents hétérogènes \citep{LoertscherMuir2025}. Dans une chaîne agricole, l'épaisseur effective du marché ne dépend cependant pas seulement du nombre de producteurs, mais aussi du nombre de transformateurs, de plateformes et d'acheteurs effectivement accessibles.
+
+La thèse introduira ainsi l'idée de \textit{vertical market thickness} : un marché est véritablement épais lorsque plusieurs chemins de commercialisation restent disponibles entre producteurs et acheteurs finaux. Un goulot d'étranglement au niveau d'une légumerie, d'un abattoir, d'un stockage ou d'une plateforme peut rendre la chaîne ``mince'' même si le nombre de producteurs est élevé.
+
+\subsection*{Coopération horizontale, pouvoir de marché et concurrence}
+
+La littérature sur les coopératives agricoles montre que la coopération peut réduire les coûts fixes, améliorer l'accès aux marchés et renforcer le pouvoir de négociation des producteurs, mais qu'elle soulève aussi des questions de gouvernance, d'incitation et de pouvoir de marché \citep{CandemirEtAl2021}. Dans les marchés agricoles, les dimensions spatiales peuvent en outre générer des situations d'oligopsone lorsque les producteurs ont accès à un nombre limité d'acheteurs \citep{GraubnerEtAl2021}.
+
+La thèse cherchera donc à identifier une frontière entre :
+\[
+\text{coopération productive utile}
+\]
+et
+\[
+\text{coordination commerciale réduisant excessivement la concurrence}.
+\]
+
+\subsection*{Organisation verticale, contrats et partage du risque}
+
+Le risque hydrique pose également une question de partage du risque entre les différents maillons de la chaîne. Un contrat à prix fixe, un contrat pluriannuel, un volume garanti ou une prise en charge logistique ne répartissent pas de la même manière les conséquences d'un choc climatique.
+
+La structure verticale peut également générer des problèmes de \textit{hold-up}. Un producteur n'investira dans une culture plus résiliente ou dans un équipement spécifique que s'il anticipe un débouché suffisamment stable. Le transformateur ou l'acheteur peut inversement hésiter à investir dans une capacité dédiée si l'offre agricole est incertaine. La contractualisation peut alors soutenir des investissements complémentaires le long de la chaîne.
+
+\subsection*{Enchères, commande publique, collusion et politique de la concurrence}
+
+Ce dernier bloc assure un lien direct avec les travaux de Karine Brisset au CRESE. Ses thèmes de recherche sont l'économie des enchères, l'économie industrielle et la politique de la concurrence \citep{BrissetCRESE}. Ses travaux portent notamment sur les ententes dans les appels d'offres, les enchères de procurement, le risque, les droits de priorité et la dissuasion des cartels \citep{Brisset2002,BrissetThomas2004,BrissetCochardMarechal2015,BrissetPeterle2025}.
+
+Cette littérature est particulièrement pertinente pour le projet. La commande publique alimentaire constitue en effet un maillon vertical décisif entre l'offre agricole régionale et la consommation collective. Les marchés des lycées, des collèges, des écoles, des établissements médico-sociaux ou des cuisines centrales des collectivités peuvent donner de la visibilité aux producteurs, favoriser l'entrée de nouveaux fournisseurs et contribuer à la structuration de filières locales. Ils peuvent aussi, par la taille des lots, la durée des contrats, les critères d'attribution, les exigences logistiques ou la fréquence des remises en concurrence, modifier fortement la structure du marché.
+
+L'analyse de ces appels d'offres permettra donc d'étudier la manière dont les règles de procurement influencent simultanément l'accès des petits producteurs, la concurrence entre fournisseurs, la mutualisation logistique et la résilience face aux chocs hydriques. La constitution de groupements ou le partage d'informations nécessaire à la préparation de l'offre peut réduire les coûts fixes et rendre possible la réponse à des marchés publics plus importants, mais il peut également modifier les stratégies d'enchères et le degré de rivalité. La question devient alors une question de \textit{market design} : quelles règles de commande publique permettent de bénéficier des économies de coordination sans compromettre la concurrence ?
+
+\subsection*{Contribution scientifique}
+
+Le gap de recherche se situe à l'intersection de ces littératures. Les effets de la sécheresse sur les rendements sont bien documentés ; la coopération agricole, la concurrence et la contractualisation verticale disposent chacune d'une littérature importante. En revanche, il existe moins de travaux analysant simultanément :
+
+\begin{quote}
+la propagation verticale d'un choc hydrique, la coopération horizontale entre producteurs, l'épaisseur effective du marché et les risques de concentration ou de collusion.
+\end{quote}
+
+La contribution de la thèse sera précisément d'étudier ces interactions dans un même cadre.
+
+\section{Axe 1 -- Théorie : risque hydrique, structure verticale et degré optimal de coopération}
+
+Le premier article développera un modèle d'économie industrielle représentant plusieurs niveaux de la chaîne :
+\[
+\text{Producteurs}
+\rightarrow
+\text{intermédiaires / transformation}
+\rightarrow
+\text{acheteurs}.
+\]
+
+La production du producteur \(i\) dépendra d'un choc hydrique \(W_{it}\). Pour un acheteur \(j\), le coût d'approvisionnement auprès d'un fournisseur \(i\) pourra être écrit :
+\[
+C_{ijt}=p_{it}q_{ijt}+T(d_{ij},q_{ijt})+F_{ij}
++\lambda_j Pr(Rupture_{ijt}).
+\]
+
+Le modèle introduira simultanément :
+Le modèle intégrera la corrélation spatiale des chocs hydriques entre producteurs, les coûts fixes de relation et de contractualisation, les capacités limitées de transformation et de stockage, la coopération horizontale sur certains inputs ou infrastructures, le pouvoir de négociation vertical et la concurrence entre producteurs pour l'accès aux débouchés.
+
+Une mesure d'épaisseur effective verticale sera proposée :
+\[
+M^{eff}=f(N_P,N_T,N_A,K_T,d,\rho,F,A),
+\]
+où \(N_P\) désigne les producteurs, \(N_T\) les transformateurs ou intermédiaires, \(N_A\) les acheteurs, \(K_T\) les capacités de transformation, \(d\) les distances, \(\rho\) la corrélation des risques et \(A\) les règles d'accès aux dispositifs collectifs.
+
+Le modèle cherchera à caractériser un niveau de coopération \(C^*\) maximisant :
+\[
+W(C)=Gains_{\text{coordination}}
++Gains_{\text{résilience}}
+-Pertes_{\text{concurrence}}.
+\]
+
+L'article permettra ainsi d'étudier dans quelles conditions la mutualisation d'infrastructures ou de logistique épaissit le marché, et dans quelles conditions elle risque au contraire de créer des barrières à l'entrée ou de réduire la rivalité.
+
+Outils : économie industrielle, théorie des jeux, théorie des contrats, procurement et enchères, choix sous risque, simulations numériques.
+
+\section{Axe 2 -- Empirique : propagation verticale des sécheresses et résilience des chaînes}
+
+Le deuxième article cherchera à identifier empiriquement la manière dont les sécheresses se propagent le long des chaînes d'approvisionnement régionales.
+
+La base de données combinera, selon les possibilités d'accès :
+La base de données combinera les données communales du Recensement agricole et les données DRAAF/Agreste, les précipitations, températures, humidité des sols et restrictions d'eau, les informations relatives à l'irrigation et aux infrastructures hydrauliques, ainsi que les données de marchés publics, de restauration collective et, lorsque des partenariats le permettront, les données d'achats ou de facturation. Elle intégrera également la localisation des transformateurs, plateformes, légumeries, abattoirs et capacités de stockage, ainsi que les caractéristiques des PAT et des autres dispositifs territoriaux.
+
+L'objectif sera de reconstituer, lorsque les données le permettent, les relations :
+\[
+\text{producteur} \times \text{intermédiaire} \times \text{acheteur} \times \text{temps}.
+\]
+
+Une attention spécifique sera portée aux chaînes d'approvisionnement issues de la commande publique alimentaire. Les appels d'offres des lycées régionaux constitueront un terrain prioritaire, mais l'analyse pourra être étendue aux collèges, aux communes, aux intercommunalités, aux cuisines centrales et, plus largement, aux collectivités territoriales. Il s'agira d'étudier comment la taille et l'allotissement des marchés, la durée des contrats, les critères de sélection, la fréquence de remise en concurrence et les exigences logistiques affectent la participation des producteurs, la concentration des fournisseurs et la capacité des acheteurs publics à maintenir leurs approvisionnements après un épisode de sécheresse.
+
+L'exposition hydrique d'un acheteur pourra être mesurée par tle poids du fournisseur dans l'approvisionnement de l'acheteur.
+
+L'analyse portera sur trois mécanismes : transmission verticale du choc (volumes, prix, utilisation des capacités de transformation, ruptures et substitutions , résilience) ; diversification géographique, nombre de chemins alternatifs dans la chaîne, stockage et coordination  et concurrence : entrée et sortie de fournisseurs, concentration, dispersion des prix et participation aux appels d'offres.
+
+L'identification mobilisera des effets fixes, des \textit{event studies} autour des épisodes de sécheresse et, lorsque les variations institutionnelles le permettent, des stratégies de \textit{difference-in-differences}. L'analyse de réseaux permettra de mesurer les goulets d'étranglement et la redondance des chemins d'approvisionnement.
+
+Outils : économétrie de panel et méthodes causales, analyse spatiale, économie des réseaux, indicateurs de concurrence et de concentration.
+
+\section{Axe 3 -- Expérimental : DCE sur contrats, coopération et partage du risque hydrique}
+
+Le troisième article prendra la forme d'un \textit{Discrete Choice Experiment} auprès de producteurs agricoles de Bourgogne--Franche-Comté.
+
+Les participants devront choisir entre des contrats présentant différentes caractéristiques. Les contrats proposés varieront selon le mécanisme de formation du prix, qui pourra être fixe, indexé ou issu d'une procédure d'enchère, selon leur durée, le volume minimum garanti, le partage éventuel des pertes en cas de sécheresse, la prise en charge ou la mutualisation de la logistique, le cofinancement d'un investissement d'adaptation, l'exclusivité ou la possibilité de vendre à plusieurs acheteurs, le degré de partage d'information au sein d'un groupement et le scénario de risque hydrique.
+
+Le DCE permettra d'identifier la valeur économique de plusieurs mécanismes verticaux :
+\[
+\text{sécurisation du débouché},
+\quad
+\text{partage du risque},
+\quad
+\text{flexibilité contractuelle}.
+\]
+
+Il permettra également d'identifier la valeur des mécanismes horizontaux :
+\[
+\text{mutualisation logistique},
+\quad
+\text{infrastructure commune},
+\quad
+\text{coopération informationnelle}.
+\]
+
+L'estimation par logit conditionnel puis mixed logit permettra d'analyser l'hétérogénéité des préférences et de calculer des équivalents monétaires.
+
+En lien direct avec les travaux expérimentaux de Karine Brisset, un module pourra également comparer différents mécanismes de procurement appliqués à l'approvisionnement alimentaire public. Les scénarios pourront faire varier l'allotissement, la durée du marché, la possibilité de candidatures individuelles ou groupées, les garanties de volume, les règles de révision des prix et les exigences de continuité d'approvisionnement en période de sécheresse. L'objectif sera d'étudier comment le design des appels d'offres affecte simultanément la participation, la concurrence, l'aversion au risque, l'entrée des petits producteurs et la capacité de coordination. Le dispositif cherchera ainsi à identifier les règles qui permettent une mutualisation productive ou logistique sans encourager une coordination commerciale illicite.
+
+Outils : économie expérimentale, DCE, mixed logit, théorie des enchères et du procurement.
+
+\section{Cohérence des trois axes}
+
+Les trois articles répondent à une même séquence :
+\[
+\boxed{
+\text{Risque hydrique}
+\rightarrow
+\text{choc sur l'amont}
+\rightarrow
+\text{transmission verticale}
+\rightarrow
+\text{coopération / contractualisation}
+\rightarrow
+\text{résilience et concurrence}
+}
+\]
+
+Le premier article établit les mécanismes et les prédictions théoriques. Le deuxième teste leur validité dans les données. Le troisième identifie les préférences et les mécanismes microéconomiques susceptibles de guider le design des contrats et des marchés.
+
+Cette articulation évite de réduire la thèse à une étude de l'irrigation ou des circuits courts : le véritable objet est l'organisation économique de chaînes agricoles soumises à un risque de production corrélé.
+
+\section{Adéquation avec le CRESE et la direction de thèse}
+
+L'inscription du projet au CRESE est particulièrement cohérente avec sa dimension d'économie industrielle, de théorie des incitations et d'économie expérimentale.
+
+Le lien avec les travaux de Karine Brisset est direct. Professeure des Universités au CRESE, elle développe des recherches en économie des enchères, économie industrielle et politique de la concurrence \citep{BrissetCRESE}. Ses travaux sur les appels d'offres et les ententes permettent d'encadrer la question de la coopération entre producteurs lorsqu'elle interfère avec la concurrence. Ses recherches sur le procurement et les droits de priorité permettent d'analyser le rôle du design des mécanismes d'achat et de l'aversion au risque \citep{BrissetCochardMarechal2015}. Ses travaux récents sur la dissuasion des cartels et les programmes de clémence renforcent enfin l'ancrage du projet dans la politique de la concurrence \citep{BrissetPeterle2025}.
+
+Le projet constitue ainsi une extension naturelle de ces problématiques à un champ régional prioritaire : les chaînes agricoles confrontées à la rareté de l'eau. Il mobilise les mêmes objets fondamentaux, enchères, concurrence, risque, incitations, collusion et design de marché, mais les applique à la résilience et à la transition des filières agricoles.
+
+Cette articulation est également pertinente pour le troisième axe : l'expérience acquise au CRESE en économie expérimentale permet de concevoir un DCE ou, dans une extension ultérieure, une expérimentation contrôlée sur les mécanismes de procurement, l'entrée et les comportements stratégiques.
+
+\section{Intérêt et retombées pour la Région Bourgogne--Franche-Comté}
+
+Pour la Région, le projet doit produire des résultats directement mobilisables sur quatre plans.
+
+\paragraph{Adaptation hydrique.}
+Identifier les filières et les maillons de chaîne dont la vulnérabilité au risque de sécheresse est la plus forte, et déterminer si les investissements hydrauliques suffisent ou doivent être accompagnés d'une sécurisation des débouchés.
+
+\paragraph{Structuration des filières.}
+Déterminer dans quelles situations plateformes, infrastructures collectives, groupements ou contrats pluriannuels améliorent réellement la résilience.
+
+\paragraph{Politique économique et industrielle.}
+Évaluer quand un soutien public à une capacité collective, stockage, transformation, logistique, irrigation, corrige une défaillance de coordination et permet le développement du marché.
+
+\paragraph{Politique de concurrence et commande publique.}
+Concevoir des dispositifs régionaux qui facilitent l'accès des producteurs aux marchés sans créer de barrières à l'entrée, de dépendance excessive ou de risque de collusion.
+
+Le projet offre ainsi une lecture économique intégrée des politiques de l'eau, de l'agriculture et de l'alimentation. Son objectif n'est pas seulement de déterminer comment produire sous contrainte hydrique, mais comment organiser les chaînes et les marchés pour rendre l'adaptation économiquement viable, concurrentielle et résiliente.
+
+\section{Calendrier doctoral}
+
+Année 1 : revue de littérature, construction du modèle théorique, collecte et appariement des données régionales, première version de l'article 1.
+
+Année 2 : construction du réseau vertical d'approvisionnement, analyses économétriques et spatiales, rédaction de l'article 2, conception et pré-test du DCE.
+
+Année 3 : réalisation du DCE, estimation et rédaction de l'article 3, mise en cohérence des trois articles et valorisation auprès des partenaires régionaux.
+
+\section{Conclusion}
+
+La thèse propose de considérer le risque hydrique comme un choc d'organisation économique autant que comme un choc agronomique. Lorsque l'eau devient rare, la résilience dépend de la capacité des producteurs à coopérer, des relations contractuelles entre les différents maillons, du nombre de débouchés effectivement accessibles et des mécanismes permettant de maintenir la concurrence.
+
+Le cadre de \textit{market thickness}, enrichi d'une dimension verticale, permet de relier ces éléments. Une chaîne résiliente n'est pas simplement une chaîne locale ou diversifiée : c'est une chaîne dans laquelle suffisamment de producteurs, d'intermédiaires et d'acheteurs peuvent se substituer les uns aux autres, sans qu'un maillon critique ou une organisation collective ne ferme le marché.
+
+Par son articulation entre risque climatique, économie industrielle, procurement, concurrence et expérimentation, le projet répond à la fois à une question académique originale et à un enjeu concret de politique régionale en Bourgogne--Franche-Comté.
+
+\bibliographystyle{apalike}
+\bibliography{references_projet_vertical}
+\end{document}
